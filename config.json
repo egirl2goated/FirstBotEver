@@ -1,0 +1,34 @@
+{
+  "logChannelName": "mod-logs",
+  "muteRoleName": "Muted",
+  "automod": {
+    "antiSpam": {
+      "enabled": true,
+      "messageLimit": 5,
+      "intervalMs": 5000,
+      "timeoutMs": 300000
+    },
+    "antiInvite": {
+      "enabled": true,
+      "deleteMessage": true
+    },
+    "antiLink": {
+      "enabled": false,
+      "deleteMessage": true,
+      "allowedDomains": ["youtube.com", "youtu.be", "tenor.com", "giphy.com"]
+    },
+    "badWords": {
+      "enabled": true,
+      "words": ["badword1", "badword2"],
+      "deleteMessage": true,
+      "warnUser": true
+    }
+  },
+  "warnings": {
+    "thresholds": [
+      { "count": 3, "action": "timeout", "durationMs": 600000 },
+      { "count": 5, "action": "kick" },
+      { "count": 7, "action": "ban" }
+    ]
+  }
+}
